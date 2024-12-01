@@ -47,10 +47,13 @@ div.info {
     background-color: #1e222a;
 
     h2 {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
         font-family: 'Source Code Pro', monospace;
         font-weight: initial;
         color: #61afef;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     dl {
@@ -59,6 +62,41 @@ div.info {
 
     h6 {
         margin-bottom: 0;
+    }
+
+    svg {
+        stroke: #61afef;
+        padding-right: 10px;
+    }
+}
+
+div.warn {
+    padding: 10px 20px 20px 15px;
+    border-left: thick solid #e5c07b;
+    border-radius: 5px;
+    background-color: #1e222a;
+
+    h2 {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: initial;
+        color: #e5c07b;
+        margin-top: 10px;
+    }
+
+    dl {
+        margin: 0px 0px 0px 10px;
+    }
+
+    h6 {
+        margin-bottom: 0;
+    }
+
+    svg {
+        stroke: #e5c07b;
+        padding-right: 10px;
     }
 }
 
@@ -84,6 +122,7 @@ div {
     border-left: medium solid #e5c07b;
     border-radius: 5px;
     padding: 0px 0px 0px 10px;
+    margin: 40px 0px 10px 0px;
     text-shadow: rgba(0, 0, 0, 0.25) 2px 5px 5px;
 }
 
@@ -131,6 +170,14 @@ ul {
     border-radius: 10px;
 }
 
+ul.pros {
+    border-left: medium solid #98c379;
+}
+
+ul.cons {
+    border-left: medium solid #e06c75;
+}
+
 .ques {
     margin-left: -15px;
     list-style: none;
@@ -151,6 +198,28 @@ ul {
     font-weight: bold;
 }
 
+.download-btn {
+    background-color: #1e222a;
+    border-left: medium solid #56b6c2;
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+
+.grid {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+.youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
 footer {
     background: #32363e;
     padding: 20px 0px 0px 0px;
@@ -158,6 +227,15 @@ footer {
     box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.6),
                 inset 0 -60px 20px -20px rgba(0,0,0,0.6);
     flex: 0 0 50px;
+
+    svg {
+        fill: #bec4cf;
+        padding: 0px 10px 0px 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 table td, table td {
@@ -166,10 +244,40 @@ table td, table td {
     padding: 0px 30px 0px 30px;
 }
 
+.socialbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
 .copyright {
     background-color: #282c34;
     text-align: center;
     padding: 10px 0px 10px 0px;
+    margin: 0;
+
+    .socials {
+        padding: 20px 0px 10px 0px;
+        margin: 0px;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
+    padding: 8px 10px 5px 10px;
+    margin-bottom: 0;
+    background-color: #1e222a;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    line-height: 1.4em;
+    font-size: 0.8em;
+    a {
+        border-left: medium solid #56b6c2;
+        border-radius: 5px;
+    }
 }
 
 @keyframes leftAnimateIn {
